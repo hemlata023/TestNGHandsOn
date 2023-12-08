@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Testonemodue" thread-count="2" parallel="classes">
+<test name="ModuleOneTest">
+  
+    
+
+  
+    <classes>
+      <class name="ParrallelScripts.SampleFourTest"/>
+      <class name="ParrallelScripts.SampleOneTest"/>
+      <class name="ParrallelScripts.SampleThreeTest"/>
+      
+    </classes>
+  </test> <!-- TestoneModue -->
+</suite> <!-- Testonemodue -->
