@@ -6,7 +6,9 @@
       <class name="TestScript.SampleoneTest">
         <methods>
           <include name="Seleniumrsearch"/>
-          <include name="Cucumbersearch"/>
+          <include name="finishExtent"/>
+          <include name="setupExtent"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- TestScript.SampleoneTest -->
     </classes>

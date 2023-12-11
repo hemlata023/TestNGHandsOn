@@ -6,21 +6,57 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.ViewName;
 
 
 
 public class SampleoneTest {
-	//WebDriver driver;
+	WebDriver driver;
+	ExtentReports extentReports;
+	ExtentSparkReporter spark;
+	ExtentTest extenttest;
+	
+	@BeforeTest
+	public void setupExtent() {
+		extentReports= new ExtentReports();
+		spark = new ExtentSparkReporter("test-output/SparkRport.html")
+		        .viewConfigurer()
+		        .viewOrder()
+		        .as(new ViewName[] {
+		        	ViewName.DASHBOARD,
+		        	ViewName.TEST,
+		        	ViewName.AUTHOR,
+		        	ViewName.DEVICE,
+		        	ViewName.LOG,
+
+		        	
+		        }).apply();
+		        
+		extentReports.attachReporter(spark);
+	}
+	private Object viewConfigurer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	//@BeforeMethod
-	   //  public void setup()
-	    // {
-		  //  driver = new ChromeDriver();
-		//	driver.manage().window().maximize();
-		//	driver.manage().deleteAllCookies();
-	//     }
+	    // public void setup()
+	     //{
+		  //driver = new ChromeDriver();
+			//driver.manage().window().maximize();
+			//driver.manage().deleteAllCookies();
+	   // }
 			
 	
 	// Soft Assertin Example 
@@ -42,9 +78,10 @@ public class SampleoneTest {
     
 			
   //}
-  @Test()
+  @Test(retryAnalyzer= RetryAnalyzerSample.class)
   
   public void Seleniumrsearch() {
+	  extenttest =extentReports.createTest("Selenium search Test");
 	  WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -57,8 +94,9 @@ public class SampleoneTest {
 	    driver.close();
 				
 }
-  @Test(alwaysRun=true, dependsOnMethods="Seleniumrsearch")
+  @Test()
    void Cucumbersearch() {
+	  extenttest =extentReports.createTest("java search Test");
 	  WebDriver driver = new ChromeDriver();
 	  driver.manage().window().maximize();
    	  driver.manage().deleteAllCookies();
@@ -68,8 +106,9 @@ public class SampleoneTest {
    	sercbox.sendKeys(Keys.ENTER);
   }
   
-  @Test(enabled=false)
+  @Test()
   void appiumSearch() {
+	  extenttest =extentReports.createTest("appium search Test");
 	  WebDriver driver = new ChromeDriver();
 	  driver.manage().window().maximize();
   	  driver.manage().deleteAllCookies();
@@ -79,8 +118,10 @@ public class SampleoneTest {
   	sercbox.sendKeys(Keys.ENTER);
  }
   
-  @Test(enabled=false)
+  @Test()
   void CyberSearch() {
+	  extenttest =extentReports.createTest("cyber search Test");
+	  
 	  WebDriver driver = new ChromeDriver();
 	  driver.manage().window().maximize();
   	  driver.manage().deleteAllCookies();
@@ -88,8 +129,25 @@ public class SampleoneTest {
   	WebElement sercbox =driver.findElement(By.id("APjFqb"));
   	sercbox.sendKeys("cyber  tutorial");
   	sercbox.sendKeys(Keys.ENTER);
+  	
+  } 	
+  @AfterMethod
+  public void tearDown(ITestResult result) {
+	  if(ITestResult.FAILURE== result.getStatus()) {
+		  extenttest.log(Status.FAIL,result.getThrowable().getMessage());
+	  }
+	  
+  }
+  	
+  	@AfterTest
+  	public void finishExtent() {
+  		
+  		extentReports.flush();
+  		
+  		
+  	}
  }
-}
+
 	     	
        	    
 		

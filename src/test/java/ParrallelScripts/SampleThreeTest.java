@@ -15,7 +15,7 @@ public class SampleThreeTest {
 	}
 	
 	
-	@Test
+	@Test(invocationCount=6, threadPoolSize=3,timeOut=10000)
 	  public void TestThree() {
 		  long id= Thread.currentThread().getId();
 		  System.out.println("Testl3 in sampleThree....."+id);

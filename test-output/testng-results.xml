@@ -1,65 +1,302 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results retried="3" ignored="0" total="7" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-08T07:53:22 GMT" name="Testonemodue" finished-at="2023-12-08T07:53:22 GMT" duration-ms="125">
+  <suite started-at="2023-12-11T07:40:54 GMT" name="Default suite" finished-at="2023-12-11T07:41:32 GMT" duration-ms="37945">
     <groups>
     </groups>
-    <test started-at="2023-12-08T07:53:22 GMT" name="ModuleOneTest" finished-at="2023-12-08T07:53:22 GMT" duration-ms="125">
-      <class name="ParrallelScripts.SampleThreeTest">
-        <test-method signature="TestOne()[pri:0, instance:ParrallelScripts.SampleThreeTest@2525ff7e]" started-at="2023-12-08T07:53:22 GMT" name="TestOne" finished-at="2023-12-08T07:53:22 GMT" duration-ms="4" status="PASS">
+    <test started-at="2023-12-11T07:40:54 GMT" name="Default test" finished-at="2023-12-11T07:41:32 GMT" duration-ms="37945">
+      <class name="TestScript.SampleoneTest">
+        <test-method is-config="true" signature="setupExtent()[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:40:54 GMT" name="setupExtent" finished-at="2023-12-11T07:40:54 GMT" duration-ms="428" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestOne -->
-        <test-method signature="TestThree()[pri:0, instance:ParrallelScripts.SampleThreeTest@2525ff7e]" started-at="2023-12-08T07:53:22 GMT" name="TestThree" finished-at="2023-12-08T07:53:22 GMT" duration-ms="2" status="PASS">
+        </test-method> <!-- setupExtent -->
+        <test-method signature="Cucumbersearch()[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:40:54 GMT" name="Cucumbersearch" finished-at="2023-12-11T07:40:58 GMT" duration-ms="4227" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestThree -->
-        <test-method signature="TestTwo()[pri:0, instance:ParrallelScripts.SampleThreeTest@2525ff7e]" started-at="2023-12-08T07:53:22 GMT" name="TestTwo" finished-at="2023-12-08T07:53:22 GMT" duration-ms="1" status="PASS">
+        </test-method> <!-- Cucumbersearch -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:40:58 GMT" name="tearDown" finished-at="2023-12-11T07:40:58 GMT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Cucumbersearch status=SUCCESS method=SampleoneTest.Cucumbersearch()[pri:0, instance:TestScript.SampleoneTest@865dd6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestTwo -->
-        <test-method signature="Testfour()[pri:0, instance:ParrallelScripts.SampleThreeTest@2525ff7e]" started-at="2023-12-08T07:53:22 GMT" name="Testfour" finished-at="2023-12-08T07:53:22 GMT" duration-ms="1" status="PASS">
+        </test-method> <!-- tearDown -->
+        <test-method signature="CyberSearch()[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:40:58 GMT" name="CyberSearch" finished-at="2023-12-11T07:41:02 GMT" duration-ms="3571" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Testfour -->
-      </class> <!-- ParrallelScripts.SampleThreeTest -->
-      <class name="ParrallelScripts.SampleOneTest">
-        <test-method signature="TestFour()[pri:0, instance:ParrallelScripts.SampleOneTest@61d6015a]" started-at="2023-12-08T07:53:22 GMT" name="TestFour" finished-at="2023-12-08T07:53:22 GMT" duration-ms="13" status="PASS">
+        </test-method> <!-- CyberSearch -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:41:02 GMT" name="tearDown" finished-at="2023-12-11T07:41:02 GMT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CyberSearch status=SUCCESS method=SampleoneTest.CyberSearch()[pri:0, instance:TestScript.SampleoneTest@865dd6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestFour -->
-        <test-method signature="TestOne()[pri:0, instance:ParrallelScripts.SampleOneTest@61d6015a]" started-at="2023-12-08T07:53:22 GMT" name="TestOne" finished-at="2023-12-08T07:53:22 GMT" duration-ms="2" status="PASS">
+        </test-method> <!-- tearDown -->
+        <test-method retried="true" signature="Seleniumrsearch()[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:41:02 GMT" name="Seleniumrsearch" finished-at="2023-12-11T07:41:07 GMT" duration-ms="4983" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Selenuim Tutorial-Google Search] but found [Selenuim tutorial - Google Search]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Selenuim Tutorial-Google Search] but found [Selenuim tutorial - Google Search]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at TestScript.SampleoneTest.Seleniumrsearch(SampleoneTest.java:93)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestOne -->
-        <test-method signature="TestThree()[pri:0, instance:ParrallelScripts.SampleOneTest@61d6015a]" started-at="2023-12-08T07:53:22 GMT" name="TestThree" finished-at="2023-12-08T07:53:22 GMT" duration-ms="8" status="PASS">
+        </test-method> <!-- Seleniumrsearch -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:41:07 GMT" name="tearDown" finished-at="2023-12-11T07:41:07 GMT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Seleniumrsearch status=SKIP method=SampleoneTest.Seleniumrsearch()[pri:0, instance:TestScript.SampleoneTest@865dd6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestThree -->
-        <test-method signature="TestTwo()[pri:0, instance:ParrallelScripts.SampleOneTest@61d6015a]" started-at="2023-12-08T07:53:22 GMT" name="TestTwo" finished-at="2023-12-08T07:53:22 GMT" duration-ms="6" status="PASS">
+        </test-method> <!-- tearDown -->
+        <test-method retried="true" signature="Seleniumrsearch()[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:41:07 GMT" name="Seleniumrsearch" finished-at="2023-12-11T07:41:14 GMT" duration-ms="6699" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Selenuim Tutorial-Google Search] but found [Selenuim tutorial - Google Search]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Selenuim Tutorial-Google Search] but found [Selenuim tutorial - Google Search]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at TestScript.SampleoneTest.Seleniumrsearch(SampleoneTest.java:93)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:214)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestTwo -->
-      </class> <!-- ParrallelScripts.SampleOneTest -->
-      <class name="ParrallelScripts.SampleFourTest">
-        <test-method signature="TestOne()[pri:0, instance:ParrallelScripts.SampleFourTest@2e1d27ba]" started-at="2023-12-08T07:53:22 GMT" name="TestOne" finished-at="2023-12-08T07:53:22 GMT" duration-ms="13" status="PASS">
+        </test-method> <!-- Seleniumrsearch -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:41:14 GMT" name="tearDown" finished-at="2023-12-11T07:41:14 GMT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Seleniumrsearch status=SKIP method=SampleoneTest.Seleniumrsearch()[pri:0, instance:TestScript.SampleoneTest@865dd6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestOne -->
-        <test-method signature="TestTwo()[pri:0, instance:ParrallelScripts.SampleFourTest@2e1d27ba]" started-at="2023-12-08T07:53:22 GMT" name="TestTwo" finished-at="2023-12-08T07:53:22 GMT" duration-ms="5" status="PASS">
+        </test-method> <!-- tearDown -->
+        <test-method retried="true" signature="Seleniumrsearch()[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:41:14 GMT" name="Seleniumrsearch" finished-at="2023-12-11T07:41:20 GMT" duration-ms="6160" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Selenuim Tutorial-Google Search] but found [Selenuim tutorial - Google Search]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Selenuim Tutorial-Google Search] but found [Selenuim tutorial - Google Search]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at TestScript.SampleoneTest.Seleniumrsearch(SampleoneTest.java:93)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:214)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestTwo -->
-        <test-method signature="Testfour()[pri:0, instance:ParrallelScripts.SampleFourTest@2e1d27ba]" started-at="2023-12-08T07:53:22 GMT" name="Testfour" finished-at="2023-12-08T07:53:22 GMT" duration-ms="2" status="PASS">
+        </test-method> <!-- Seleniumrsearch -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:41:20 GMT" name="tearDown" finished-at="2023-12-11T07:41:20 GMT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Seleniumrsearch status=SKIP method=SampleoneTest.Seleniumrsearch()[pri:0, instance:TestScript.SampleoneTest@865dd6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Testfour -->
-        <test-method signature="Testthree()[pri:0, instance:ParrallelScripts.SampleFourTest@2e1d27ba]" started-at="2023-12-08T07:53:22 GMT" name="Testthree" finished-at="2023-12-08T07:53:22 GMT" duration-ms="2" status="PASS">
+        </test-method> <!-- tearDown -->
+        <test-method signature="Seleniumrsearch()[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:41:20 GMT" name="Seleniumrsearch" finished-at="2023-12-11T07:41:27 GMT" duration-ms="7370" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Selenuim Tutorial-Google Search] but found [Selenuim tutorial - Google Search]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Selenuim Tutorial-Google Search] but found [Selenuim tutorial - Google Search]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at TestScript.SampleoneTest.Seleniumrsearch(SampleoneTest.java:93)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:214)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Testthree -->
-      </class> <!-- ParrallelScripts.SampleFourTest -->
-    </test> <!-- ModuleOneTest -->
-  </suite> <!-- Testonemodue -->
+        </test-method> <!-- Seleniumrsearch -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:41:27 GMT" name="tearDown" finished-at="2023-12-11T07:41:27 GMT" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Seleniumrsearch status=FAILURE method=SampleoneTest.Seleniumrsearch()[pri:0, instance:TestScript.SampleoneTest@865dd6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="appiumSearch()[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:41:27 GMT" name="appiumSearch" finished-at="2023-12-11T07:41:31 GMT" duration-ms="3697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appiumSearch -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:41:31 GMT" name="tearDown" finished-at="2023-12-11T07:41:31 GMT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=appiumSearch status=SUCCESS method=SampleoneTest.appiumSearch()[pri:0, instance:TestScript.SampleoneTest@865dd6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="finishExtent()[pri:0, instance:TestScript.SampleoneTest@865dd6]" started-at="2023-12-11T07:41:31 GMT" name="finishExtent" finished-at="2023-12-11T07:41:32 GMT" duration-ms="727" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finishExtent -->
+      </class> <!-- TestScript.SampleoneTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
