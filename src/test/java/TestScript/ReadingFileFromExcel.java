@@ -1,7 +1,6 @@
 package TestScript;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -14,13 +13,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTest {
-     WebDriver driver;
-     Properties prop;
+public class ReadingFileFromExcel {
+	
+
+    WebDriver driver;
+    Properties prop;
 	@BeforeMethod
-     public void setup() throws IOException {
-         String path = System.getProperty("user.dir")
-         +"//resources//ConfigFiles//config.properties";
+    public void setup() throws IOException {
+        String path = System.getProperty("user.dir")
+        +"//resources//ConfigFiles//config.properties";
 	     FileInputStream fin = new  FileInputStream(path);
 	     prop =new Properties();
 	     prop.load(fin);
@@ -35,11 +36,11 @@ public class LoginTest {
 	     }
 	    	 
 	     
-     
+    
 	  //driver = new ChromeDriver();
 	  driver.manage().window().maximize();
 }
-    
+   
 	@Test
 	public void validLogin()
 	{
@@ -57,6 +58,4 @@ public class LoginTest {
 		driver.close();
 	}
 
-	}
-
-
+}

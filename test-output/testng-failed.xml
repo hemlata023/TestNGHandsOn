@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestScript.SampleoneTest">
+      <class name="TestScript.LoginTest">
         <methods>
-          <include name="Seleniumrsearch"/>
-          <include name="finishExtent"/>
-          <include name="setupExtent"/>
-          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="validLogin"/>
         </methods>
-      </class> <!-- TestScript.SampleoneTest -->
+      </class> <!-- TestScript.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
